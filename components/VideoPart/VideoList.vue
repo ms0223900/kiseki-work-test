@@ -1,11 +1,12 @@
 /* eslint-disable vue/attribute-hyphenation */
 <template>
   <div class="video-list-wrapper">
-    <div>
+    <div class="row">
       <VideoItem
         v-for="(video, i) in videoListData"
         :key="i"
         :videoData="video"
+        class="col-12 col-md-4 col-lg-3"
       />
     </div>
   </div>
@@ -40,6 +41,11 @@ export default Vue.extend({
 });
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  .video-list-wrapper {
+    .row {
+      width: 100%;
+      // margin: 0px;
+    }
+  }
 </style>

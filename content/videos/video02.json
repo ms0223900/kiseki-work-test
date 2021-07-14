@@ -1,9 +1,11 @@
 {
+  "videoDuration": 2200,
+  "type": "",
   "thumbnail": {
     "name": "string",
     "src": "https://via.placeholder.com/350x350"
   },
-  "title": "",
+  "title": "【ネタバレあり】クレヨンしんちゃん『オラと博士の夏休み』やってこう！",
   "channel": {
     "name": "",
     "link": ""

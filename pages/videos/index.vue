@@ -1,7 +1,9 @@
 <template>
   <div>
     <h1>Videos</h1>
+    <Header />
     <video-list :video-list-data="videoListData" />
+    <BottomNav />
   </div>
 </template>
 
@@ -16,7 +18,7 @@ export default Vue.extend({
     const videoListData = await $content('videos').fetch().catch((e) => {
       console.log(e);
     });
-    console.log('videoListData: ', videoListData);
+    // console.log('videoListData: ', videoListData);
     return ({
       videoListData
     });
