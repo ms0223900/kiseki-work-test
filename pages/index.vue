@@ -1,9 +1,12 @@
 <template>
-  <Tutorial/>
+  <VideoPage />
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
+// import VideoPage from './videos/VideoPage.vue';
 
-export default Vue.extend({})
+export default Vue.extend({
+  // components: { VideoPage }
+});
 </script>

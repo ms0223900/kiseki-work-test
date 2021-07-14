@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@nuxt/content": "^1.14.0",
     "@nuxtjs/pwa": "^3.3.5",
     "bootstrap": "^4.6.0",
     "bootstrap-vue": "^2.21.2",
@@ -30,7 +31,12 @@
     "eslint": "^7.29.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "fibers": "^5.0.0",
     "jest": "^27.0.5",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.35.2",
+    "sass-loader": "10",
     "ts-jest": "^27.0.3",
     "vue-jest": "^3.0.4"
   }

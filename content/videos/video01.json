@@ -1,0 +1,13 @@
+{
+  "thumbnail": {
+    "name": "string",
+    "src": "https://via.placeholder.com/350x350"
+  },
+  "title": "",
+  "channel": {
+    "name": "",
+    "link": ""
+  },
+  "viewsCount": 0,
+  "creationTime": 0
+}
