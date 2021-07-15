@@ -9,7 +9,9 @@ export interface SingleVideo {
   channel: {
     name: string
     link: string
+    imgSrc: string
   }
   viewsCount: number
   creationTime: number
+  creationTimeLocale: string
 }

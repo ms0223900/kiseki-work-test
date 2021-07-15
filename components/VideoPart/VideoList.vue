@@ -43,9 +43,11 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
   .video-list-wrapper {
+    padding: 8px;
+    padding-bottom: 88px;
     .row {
       width: 100%;
-      // margin: 0px;
+      margin: 0px;
     }
   }
 </style>

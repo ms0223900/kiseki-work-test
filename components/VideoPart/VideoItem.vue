@@ -1,17 +1,15 @@
-<template>
-  <div class="video-item-wrapper">
-    <div class="thumbnail-wrapper">
-      <img :src="videoData.thumbnail.src">
-    </div>
-    <div class="row title-wrapper">
-      <div class="col-1">
-        <img>
-      </div>
-      <div class="col-11">
-        <h3>{{ videoData.title }}</h3>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+  .video-item-wrapper
+    .thumbnail-wrapper
+      img(:src="videoData.thumbnail.src")
+    .row.title-wrapper
+      .col-2.channel-img-wrapper
+        img(
+          :src="videoData.channel.imgSrc"
+        )
+      .col-10
+        h3 {{ videoData.title }}
+        .videoInfo {{ videoInfo }}
 </template>
 
 <script lang="ts">
@@ -29,13 +27,29 @@ export default Vue.extend({
       title: String,
       channel: Object,
       viewsCount: Number,
-      creationTime: Number
+      creationTime: Number,
+      creationTimeLocale: String
     } as PropOptions<SingleVideo>
+  },
+  computed: {
+    verifiedCount () {
+      const viewsCount = this.videoData.viewsCount;
+      if (viewsCount > 1000) {
+        const num = (this.videoData.viewsCount / 1000).toFixed(1);
+        return `${num} K`;
+      }
+      return viewsCount;
+    },
+    videoInfo () {
+      return `${this.videoData.channel.name}·${this.verifiedCount} views·${this.videoData.creationTimeLocale}`;
+    }
   }
 });
 </script>
 <style lang="scss" scoped>
   .video-item-wrapper {
+    padding: 8px;
+    // padding-right: 16px;
     img {
       width: 100%;
     }
@@ -49,9 +63,24 @@ export default Vue.extend({
     }
   }
   .title-wrapper {
+    padding: 8px 0px;
+    margin: 0px;
     flex-wrap: nowrap;
+  }
+  .channel-img-wrapper {
+    padding: 0px;
+    margin: 0px;
+    img {
+      width: 100%;
+      border-radius: 100000px;
+      overflow: hidden;
+    }
   }
   .thumbnail-wrapper {
     width: 100%;
+  }
+  .videoInfo {
+    color: #aaa;
+    font-size: 16px;
   }
 </style>

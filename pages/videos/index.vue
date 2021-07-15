@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h1>Videos</h1>
+  <div class="video-page-wrapper">
     <Header />
     <video-list :video-list-data="videoListData" />
     <BottomNav />
@@ -25,6 +24,13 @@ export default Vue.extend({
   }
 });
 </script>
-<style>
-
+<style lang="scss" scoped>
+  .video-page-wrapper {
+    .row {
+      margin: 0px;
+    }
+    // .col-* {
+    //   padding: 0px;
+    // }
+  }
 </style>
