@@ -3,29 +3,33 @@
     <nav-button-item
       v-for="(button, i) in buttonListData"
       :key="i"
-      :iconImgSrc="button.iconImgSrc"
-      :buttonName="button.buttonName"
-    />
+      v-bind="button"
+    >
+      <template #icon>
+        <component :is="button.iconName" />
+      </template>
+    </nav-button-item>
   </div>
 </template>
 
 <script>
+import { BIconHouse, BIconBarChartFill, BIconCollectionPlay, BIconJournalAlbum } from 'bootstrap-vue';
 import NavButtonItem from './NavButtonItem.vue';
 const buttonListData = [
   {
-    iconImgSrc: 'https://via.placeholder.com/48x48',
+    iconName: 'BIconHouse',
     buttonName: 'Home'
   },
   {
-    iconImgSrc: 'https://via.placeholder.com/48x48',
+    iconName: 'BIconBarChartFill',
     buttonName: 'Trending'
   },
   {
-    iconImgSrc: 'https://via.placeholder.com/48x48',
+    iconName: 'BIconCollectionPlay',
     buttonName: 'Subscriptions'
   },
   {
-    iconImgSrc: 'https://via.placeholder.com/48x48',
+    iconName: 'BIconJournalAlbum',
     buttonName: 'Library'
   }
 ];
@@ -33,7 +37,11 @@ const buttonListData = [
 export default {
   name: 'BottomNav',
   components: {
-    NavButtonItem
+    NavButtonItem,
+    BIconHouse,
+    BIconBarChartFill,
+    BIconCollectionPlay,
+    BIconJournalAlbum
   },
   data () {
     return ({

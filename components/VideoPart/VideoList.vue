@@ -1,14 +1,14 @@
 /* eslint-disable vue/attribute-hyphenation */
 <template>
   <div class="video-list-wrapper">
-    <div class="row">
+    <transition-group name="fade" class="row">
       <VideoItem
         v-for="(video, i) in videoListData"
         :key="i"
         :videoData="video"
         class="col-12 col-md-4 col-lg-3"
       />
-    </div>
+    </transition-group>
   </div>
 </template>
 
@@ -49,5 +49,11 @@ export default Vue.extend({
       width: 100%;
       margin: 0px;
     }
+  }
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 </style>

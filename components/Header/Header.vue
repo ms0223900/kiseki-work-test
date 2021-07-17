@@ -4,16 +4,17 @@
       img(src="/yt-icon.png")
     div.right-col
       button.search-btn
-        BIconSearch
+        BIcon(icon="search")
       .user-icon
         | P
 </template>
 
 <script>
-import { BIconSearch } from 'bootstrap-vue';
+import { BIconSearch, BIcon } from 'bootstrap-vue';
 export default {
   name: 'Header',
   components: {
+    BIcon,
     BIconSearch
   }
 };
@@ -23,7 +24,7 @@ export default {
   .header-wrapper {
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;

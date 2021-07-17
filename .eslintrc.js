@@ -9,10 +9,11 @@ module.exports = {
     'plugin:nuxt/recommended'
   ],
   plugins: [
+    '@typescript-eslint'
   ],
   // add your custom rules here
   rules: {
-    indent: [
+    '@typescript-eslint/indent': [
       'warn',
       2
     ],

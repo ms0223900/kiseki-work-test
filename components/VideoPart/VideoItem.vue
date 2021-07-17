@@ -14,28 +14,20 @@
 </template>
 
 <script lang="ts">
-import Vue, { PropOptions } from 'vue';
+import Vue from 'vue';
+import { PropsDefinition } from 'vue/types/options';
 import { SingleVideo } from './types';
 
 export default Vue.extend({
   name: 'VideoItem',
   props: {
-    videoData: {
-      thumbnail: {
-        name: String,
-        src: String
-      },
-      videoDuration: Number,
-      title: String,
-      channel: Object,
-      viewsCount: Number,
-      creationTime: Number,
-      creationTimeLocale: String
-    } as PropOptions<SingleVideo>
-  },
+    videoData: {}
+  } as PropsDefinition<{
+    videoData: SingleVideo
+  }>,
   computed: {
     videoDurationInfo () {
-      const duration = this.videoData.videoDuration;
+      const duration = (this.videoData as any).videoDuration;
       const hours = Math.floor(duration / (60 * 60));
       const mins = Math.floor((duration - hours * 60 * 60) / 60);
       const secs = duration - hours * 60 * 60 - mins * 60;
@@ -44,15 +36,15 @@ export default Vue.extend({
       return times.filter(t => t > 0).join(':');
     },
     verifiedCount () {
-      const viewsCount = this.videoData.viewsCount;
+      const viewsCount = (this.videoData as SingleVideo).viewsCount;
       if (viewsCount > 1000) {
-        const num = (this.videoData.viewsCount / 1000).toFixed(1);
+        const num = (viewsCount / 1000).toFixed(1);
         return `${num} K`;
       }
       return viewsCount;
     },
     videoInfo () {
-      return `${this.videoData.channel.name}\n·${this.verifiedCount} views·${this.videoData.creationTimeLocale}`;
+      return `${(this.videoData as SingleVideo).channel.name}\n·${this.verifiedCount} views·${(this.videoData as SingleVideo).creationTimeLocale}`;
     }
   }
 });

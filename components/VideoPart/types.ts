@@ -1,5 +1,6 @@
 export interface SingleVideo {
   title: string
+  tag: string //
   videoDuration: number // seconds
   type: string
   thumbnail: {

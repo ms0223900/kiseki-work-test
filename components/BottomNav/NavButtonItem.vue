@@ -1,15 +1,17 @@
-<template>
-  <button class="col-3">
-    <img :src="iconImgSrc">
-    <div>{{ buttonName }}</div>
-  </button>
+<template lang="pug">
+  button(class="col-3")
+    slot(name="icon")
+    div {{ buttonName }}
 </template>
 
 <script>
+import { BIcon } from 'bootstrap-vue';
 export default {
   name: 'NavButtonItem',
+  components: {
+    BIcon
+  },
   props: {
-    iconImgSrc: String,
     buttonName: String
   }
 };
@@ -19,5 +21,8 @@ export default {
   button {
     border: none;
     padding: 8px 0px 8px 0px;
+    &:hover {
+      background-color: #ddd;
+    }
   }
 </style>

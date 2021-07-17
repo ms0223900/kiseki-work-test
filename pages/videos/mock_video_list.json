@@ -1,0 +1,54 @@
+[
+  {
+    "videoDuration": 110,
+    "tag": "Animation",
+    "type": "",
+    "thumbnail": {
+      "name": "string",
+      "src": "https://via.placeholder.com/350x350"
+    },
+    "title": " エレクトーン 】「風のとおり道」を完成させたいのらっ🎹✨～ Play the Electone",
+    "channel": {
+      "name": "Suisei Channel",
+      "link": "",
+      "imgSrc": "https://via.placeholder.com/48x48"
+    },
+    "viewsCount": 88888,
+    "creationTime": 0,
+    "creationTimeLocale": "30 mins ago"
+  },{
+    "videoDuration": 345,
+    "tag": "Food",
+    "type": "",
+    "thumbnail": {
+      "name": "string",
+      "src": "https://via.placeholder.com/350x350"
+    },
+    "title": " エレクトーン 】「風のとおり道」を完成させたいのらっ🎹✨～ Play the Electone",
+    "channel": {
+      "name": "Suisei Channel",
+      "link": "",
+      "imgSrc": "https://via.placeholder.com/48x48"
+    },
+    "viewsCount": 7777,
+    "creationTime": 0,
+    "creationTimeLocale": "30 mins ago"
+  },{
+    "videoDuration": 12345,
+    "tag": "Animation",
+    "type": "",
+    "thumbnail": {
+      "name": "string",
+      "src": "https://via.placeholder.com/350x350"
+    },
+    "title": " エレクトーン 】「風のとおり道」を完成させたいのらっ🎹✨～ Play the Electone",
+    "channel": {
+      "name": "Suisei Channel",
+      "link": "",
+      "imgSrc": "https://via.placeholder.com/48x48"
+    },
+    "viewsCount": 333,
+    "creationTime": 0,
+    "creationTimeLocale": "30 mins ago"
+  }
+]
